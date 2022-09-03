@@ -122,6 +122,16 @@
                 x.className = "topnav";
             }
             }
+            var i =0,text;
+            text = "Hello Perkenalkan nama saya Nur Mushlichah";
+            function ketik() {
+                if(i<text.length){
+                document.getElementById("bergerak").innerHTML += text.charAt(i);
+                i++;
+                setTimeout(ketik,80);
+                }
+            }
+            ketik();
     </script>
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -136,7 +146,7 @@
         </a>
     </div>
     <div class="row">
-        <h1>Nur Mushlichah</h1>
+        <h1 id="bergerak"></h1>
     </div>
     <div class="image">
         <img src="https://raw.githubusercontent.com/NurMushlichah/NurMushlichah/main/profile.jpeg" alt="">
